@@ -1,0 +1,296 @@
+.o_list_view.sgl-wide-list .o_list_table thead th,
+.o_list_view .sgl-wide-list .o_list_table thead th {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+.o_list_view.sgl-wide-list .o_list_table tbody td,
+.o_list_view .sgl-wide-list .o_list_table tbody td {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+/* RTL Fix for SGL Module */
+.o_list_view .o_list_table thead th {
+    text-align: left !important;
+    font-weight: bold !important;
+    padding: 8px 6px !important;
+    white-space: normal !important; /* allow wrapping */
+    overflow: visible !important;
+    text-overflow: clip !important;
+    min-width: 100px !important;
+    max-width: none !important;
+}
+
+.o_list_view .o_list_table thead th .o_column_title {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+/* Column header styling */
+.o_list_view .o_list_table thead th .o_column_title {
+    font-weight: bold !important;
+    color: #2b2b2b !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Ensure proper spacing for column names */
+.o_list_view .o_list_table thead th[data-field="name"] .o_column_title {
+    content: "Job-File No." !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="business_type"] .o_column_title {
+    content: "Business Type" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="initial_file_cover_date"] .o_column_title {
+    content: "Initial Date" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="origin_office"] .o_column_title {
+    content: "Origin Office" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="eg_customer_name"] .o_column_title {
+    content: "Customer Name" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="bl_awb_mawb_hawb_bks"] .o_column_title {
+    content: "BL/AWB Numbers" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="linar_details"] .o_column_title {
+    content: "Liners Details" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="shipment_type"] .o_column_title {
+    content: "Shipment Type" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="shipment_description"] .o_column_title {
+    content: "Shipment Description" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="currency"] .o_column_title {
+    content: "Currency" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_cost"] .o_column_title {
+    content: "Estimate Cost" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_cost"] .o_column_title {
+    content: "Actual Cost" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_revenue"] .o_column_title {
+    content: "Estimate Revenue" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_revenue"] .o_column_title {
+    content: "Actual Revenue" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_profit"] .o_column_title {
+    content: "Estimate Profit" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_profit"] .o_column_title {
+    content: "Actual Profit" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_cost_egp"] .o_column_title {
+    content: "Est. Cost (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_cost_egp"] .o_column_title {
+    content: "Act. Cost (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_revenue_egp"] .o_column_title {
+    content: "Est. Revenue (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_revenue_egp"] .o_column_title {
+    content: "Act. Revenue (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_profit_egp"] .o_column_title {
+    content: "Est. Profit (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_profit_egp"] .o_column_title {
+    content: "Act. Profit (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="all_invoice_numbers"] .o_column_title {
+    content: "All Invoice Numbers" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="final_file_cover_date"] .o_column_title {
+    content: "Final Date" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="job_status"] .o_column_title {
+    content: "Job Status" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="invoice_number"] .o_column_title {
+    content: "Invoice Number" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="comments"] .o_column_title {
+    content: "Comments" !important;
+}
+
+/* Fix for RTL languages */
+.o_list_view .o_list_table {
+    direction: ltr !important;
+}
+
+.o_list_view .o_list_table thead th {
+    direction: ltr !important;
+    text-align: center !important;
+}
+
+/* Ensure proper column widths */
+.o_list_view .o_list_table tbody td {
+    padding: 4px 8px !important;
+    vertical-align: middle !important;
+    white-space: normal !important; /* allow wrapping */
+    overflow: visible !important;
+    text-overflow: initial !important;
+    word-break: break-word !important;
+}
+
+/* Removed CSS-based EGP suffix to avoid leaking into column chooser */
+
+/* Custom button styling */
+.o_list_view .o_list_buttons .btn {
+    margin-right: 5px !important;
+    font-weight: bold !important;
+}
+
+/* Ensure proper spacing in wizard */
+.o_form_view .o_form_sheet .o_group .o_group_col_6 {
+    margin-bottom: 10px !important;
+}
+
+.o_form_view .o_form_sheet .o_group .o_group_col_6 label {
+    font-weight: bold !important;
+    color: #2b2b2b !important;
+}
+
+/* Additional fixes for column headers */
+.o_list_view .o_list_table thead th .o_column_title:before {
+    content: attr(data-string) !important;
+}
+
+/* Force column header text */
+.o_list_view .o_list_table thead th[data-field="name"] .o_column_title:after {
+    content: "Job-File No." !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="business_type"] .o_column_title:after {
+    content: "Business Type" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="initial_file_cover_date"] .o_column_title:after {
+    content: "Initial Date" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="origin_office"] .o_column_title:after {
+    content: "Origin Office" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="eg_customer_name"] .o_column_title:after {
+    content: "Customer Name" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="bl_awb_mawb_hawb_bks"] .o_column_title:after {
+    content: "BL/AWB Numbers" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="linar_details"] .o_column_title:after {
+    content: "Liners Details" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="shipment_type"] .o_column_title:after {
+    content: "Shipment Type" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="shipment_description"] .o_column_title:after {
+    content: "Shipment Description" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="currency"] .o_column_title:after {
+    content: "Currency" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_cost"] .o_column_title:after {
+    content: "Estimate Cost" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_cost"] .o_column_title:after {
+    content: "Actual Cost" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_revenue"] .o_column_title:after {
+    content: "Estimate Revenue" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_revenue"] .o_column_title:after {
+    content: "Actual Revenue" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_profit"] .o_column_title:after {
+    content: "Estimate Profit" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_profit"] .o_column_title:after {
+    content: "Actual Profit" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_cost_egp"] .o_column_title:after {
+    content: "Est. Cost (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_cost_egp"] .o_column_title:after {
+    content: "Act. Cost (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_revenue_egp"] .o_column_title:after {
+    content: "Est. Revenue (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_revenue_egp"] .o_column_title:after {
+    content: "Act. Revenue (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="estimate_profit_egp"] .o_column_title:after {
+    content: "Est. Profit (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="actual_profit_egp"] .o_column_title:after {
+    content: "Act. Profit (EGP)" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="all_invoice_numbers"] .o_column_title:after {
+    content: "All Invoice Numbers" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="final_file_cover_date"] .o_column_title:after {
+    content: "Final Date" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="job_status"] .o_column_title:after {
+    content: "Job Status" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="invoice_number"] .o_column_title:after {
+    content: "Invoice Number" !important;
+}
+
+.o_list_view .o_list_table thead th[data-field="comments"] .o_column_title:after {
+    content: "Comments" !important;
+} 

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sgl_file_cover,access.sgl.file.cover,model_sgl_file_cover,,1,1,1,1
+access_sgl_file_cover_activity,access.sgl.file.cover.activity,model_sgl_file_cover_activity,,1,1,1,1
+access_sgl_file_cover_activity_column_wizard,access.sgl.file.cover.activity.column.wizard,model_sgl_file_cover_activity_column_wizard,,1,1,1,1

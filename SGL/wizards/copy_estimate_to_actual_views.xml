@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_copy_estimate_to_actual_wizard" model="ir.ui.view">
+        <field name="name">sgl.file.cover.copy.estimate.to.actual.form</field>
+        <field name="model">sgl.file.cover.copy.estimate.to.actual</field>
+        <field name="arch" type="xml">
+            <form string="Copy Estimate to Actual">
+                <p>Are you sure you want to copy the estimated values to actual values?</p>
+                <footer>
+                    <button name="action_copy" string="Copy" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_copy_estimate_to_actual" model="ir.actions.act_window">
+        <field name="name">Copy Estimate to Actual</field>
+        <field name="res_model">sgl.file.cover.copy.estimate.to.actual</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_sgl_file_cover_activity"/>
+    </record>
+</odoo>

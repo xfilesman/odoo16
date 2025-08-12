@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sgl_file_cover_activity_column_wizard_form" model="ir.ui.view">
+        <field name="name">sgl.file.cover.activity.column.wizard.form.minimal</field>
+        <field name="model">sgl.file.cover.activity.column.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select Columns" create="false" delete="false" edit="true" class="sgl-columns-wizard" style="min-width: 980px;">
+                <sheet>
+                    <group col="3" class="sgl-columns-grid" style="column-gap: 24px;">
+                        <field name="col1" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col2" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col3" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col4" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col5" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col6" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col7" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col8" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col9" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col10" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col11" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col12" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col13" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col14" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col15" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col16" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col17" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col18" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col19" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col20" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col21" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col22" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col23" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col24" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col25" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col26" style="white-space: normal; zoom: 0.9;"/>
+                        <field name="col27" style="white-space: normal; zoom: 0.9;"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_apply" type="object" string="Apply" class="btn-primary"/>
+                    <button string="Cancel" class="btn-link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

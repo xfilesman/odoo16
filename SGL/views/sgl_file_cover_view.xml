@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_sgl_file_cover_form" model="ir.ui.view">
+        <field name="name">sgl.file.cover.form</field>
+        <field name="model">sgl.file.cover</field>
+        <field name="arch" type="xml">
+            <form string="File Cover">
+                <sheet>
+                    <!-- Top Header Section -->
+                    <div style="background: transparent; padding: 15px; margin: -16px -16px 0 -16px; border-bottom: none;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <!-- Left side with Job Number -->
+                            <div style="background: white; padding: 10px; border-radius: 5px; min-width: 200px;">
+                                <div style="color: #666; font-size: 12px; margin-bottom: 5px;">Job- File No:</div>
+                                <field name="name" style="background: white; color: #333; border: none; padding: 5px; font-size: 14px; font-weight: bold; width: 100%;"/>
+                            </div>
+                            <!-- Right side with Odoo Company Logo -->
+                            <div style="background: transparent; padding: 0; border: none; min-width: 150px; display: flex; align-items: center; justify-content: center; text-align: center;">
+                                <field name="company_logo" widget="image" options="{'preview_image': 'company_logo'}" style="max-height: 48px; max-width: 160px; object-fit: contain; border: none !important; box-shadow: none !important; background: transparent !important;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Container -->
+                    <div style="padding: 20px; background: #fff;">
+                        
+                        <!-- Top Section: File and Customer Details -->
+                        <div style="margin-bottom: 20px;">
+                            <!-- File Information Row -->
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Initial file cover Date</div>
+                                    <field name="initial_file_cover_date" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box;"/>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Final file cover Date</div>
+                                    <field name="final_file_cover_date" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box;"/>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Business type</div>
+                                    <field name="business_type" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box;"/>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">EG Customer Name</div>
+                                    <field name="eg_customer_name" options="{'no_create': True}" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box;"/>
+                                </div>
+                            </div>
+
+                            <!-- Customer Tax Details Section -->
+                            <div style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; margin-bottom: 15px;">
+                                <div style="color: #666; font-size: 14px; font-weight: bold; margin-bottom: 15px;">Customer Tax details</div>
+                                <div style="display: flex; gap: 15px;">
+                                    <div style="flex: 1;">
+                                        <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Full Address:</div>
+                                         <field name="customer_full_address" readonly="1"/>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">CR no.:</div>
+                                         <field name="customer_cr_no" readonly="1"/>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">TAX no:</div>
+                                         <field name="customer_tax_no" readonly="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Middle Red Separator -->
+                        <div style="background: #d32f2f; height: 20px; margin: 20px -20px; border-top: 1px solid #b71c1c; border-bottom: 1px solid #b71c1c;"></div>
+
+                        <!-- Bottom Section: Shipment Details -->
+                        <div style="margin-top: 20px;">
+                            <div style="display: flex; gap: 15px;">
+                                <!-- Left Column -->
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Commodity</div>
+                                    <field name="commodity" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Container Count &amp; Type/ KGs</div>
+                                    <field name="container_count_type" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Origin Office</div>
+                                    <field name="origin_office" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Liner Details</div>
+                                    <field name="linar_details" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">B/L - BKs</div>
+                                    <field name="bl_awb_mawb_hawb_bks" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">HBL/AWB no.</div>
+                                    <field name="hbl_awb_no" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">POL</div>
+                                    <field name="pol" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                </div>
+                                
+                                <!-- Right Column -->
+                                <div style="flex: 1;">
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Weight &amp; Dimension</div>
+                                    <field name="weight_dimension" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Shipment Description</div>
+                                    <field name="shipment_description" class="sgl-one-line" widget="char" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">ETA/ETD</div>
+                                    <field name="eta_etd" widget="date" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">Shipment type</div>
+                                    <field name="shipment_type" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">AWB- MAWB-HAWB -</div>
+                                    <field name="bl_awb_mawb_hawb_bks" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                    
+                                    <div style="background: #f5f5f5; padding: 8px; border: 1px solid #ddd; color: #666; font-size: 12px; font-weight: bold;">POD</div>
+                                    <field name="pod" style="background: white; border: 1px solid #ccc; padding: 8px; width: 100%; box-sizing: border-box; margin-bottom: 5px;"/>
+                                </div>
+                            </div>
+                        </div>
+
+                                                 <!-- Hidden Fields for Functionality -->
+                         <div style="display: none;">
+                             <field name="currency"/>
+                             <field name="exchange_rate" attrs="{'invisible': [('currency', '=', 'egp')]}"/>
+                             <field name="customer_tax_details" readonly="1"/>
+                             <field name="all_invoice_numbers" readonly="1"/>
+                         </div>
+
+                         <!-- Activity Lines and Financial Summary -->
+                         <div style="margin-top: 30px;">
+                             <div style="display: inline-block; background: #f5f5f5; border: 1px solid #1976d2; border-bottom: none; border-radius: 8px 8px 0 0; padding: 8px 24px; color: #1976d2; font-size: 18px; font-weight: bold; margin-bottom: -2px;">Activity Lines</div>
+                             <div style="padding: 20px; border: 1px solid #1976d2; border-radius: 0 0 8px 8px; border-top: none; margin-bottom: 30px;">
+                                                                  <field name="activity_line_ids" domain="[('currency', 'in', ['egp','usd','eur'])]">
+                                     <tree editable="bottom" class="sgl-activity-lines-tree">
+                                          <field name="activity_type" string="Activity Type" optional="show" width="150"/>
+                                          <field name="currency" string="Currency" optional="show" width="100"/>
+                                          <field name="quantity" string="Quantity" optional="show" width="100"/>
+                                          <field name="price_unit" string="Cost/unit" widget="monetary" optional="show" width="120"/>
+                                          <field name="selling_price_unit" string="Selling price Unit" widget="monetary" optional="show" width="180"/>
+                                          <field name="estimate_cost" string="Estimate cost" widget="monetary" optional="show" width="130" sum="TOTAL EST. COST"/>
+                                          <field name="estimate_revenue" string="Estimate revenue" widget="monetary" optional="show" width="180" sum="TOTAL EST. REVENUE"/>
+                                          <field name="estimate_profit" string="Estimate profit" widget="monetary" optional="show" width="180" sum="TOTAL EST. PROFIT"/>
+                                          <field name="actual_cost" string="Actual cost" widget="monetary" optional="show" width="130" sum="TOTAL ACT. COST"/>
+                                          <field name="actual_revenue" string="Actual revenue" widget="monetary" optional="show" width="130" sum="TOTAL ACT. REVENUE"/>
+                                          <field name="actual_profit" string="Actual profit" widget="monetary" optional="show" width="130" sum="TOTAL ACT. PROFIT"/>
+                                          <field name="vendor_name" string="Vendor name" optional="show" width="150"/>
+                                          <field name="vendor_invoice" string="Vendor invoice" optional="show" width="180"/>
+                                      </tree>
+                                 </field>
+                             </div>
+                             <div style="display: inline-block; background: #f5f5f5; border: 1px solid #388e3c; border-bottom: none; border-radius: 8px 8px 0 0; padding: 8px 24px; color: #388e3c; font-size: 18px; font-weight: bold; margin-bottom: -2px;">Financial Summary</div>
+                             <div style="padding: 20px; border: 1px solid #388e3c; border-radius: 0 0 8px 8px; border-top: none; margin-bottom: 30px;">
+                                 <!-- Removed summary_currency radio selection -->
+                                 <div style="margin-bottom: 10px; font-weight: bold; font-size: 15px;">Exchange Rate</div>
+                                 <div style="display: flex; gap: 30px; align-items: center; margin-bottom: 20px;">
+                                     <div style="display: flex; align-items: center; gap: 5px;">
+                                         <field name="usd_exchange_rate" style="width: 100px;"/>
+                                         <span style="font-weight: bold; color: #1976d2;">USD</span>
+                                     </div>
+                                     <div style="display: flex; align-items: center; gap: 5px;">
+                                         <field name="eur_exchange_rate" style="width: 100px;"/>
+                                         <span style="font-weight: bold; color: #388e3c;">EUR</span>
+                                     </div>
+                                 </div>
+                                 <!-- Currency Info removed -->
+                                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                     <!-- Cost Summary Card -->
+                                      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                          <h3 style="color: #666; margin-bottom: 15px; font-size: 16px;">Cost Summary</h3>
+                                          <div style="display: grid; gap: 10px;">
+                                              <div class="o_form_label" style="font-weight:600;">Estimate Cost</div>
+                                              <field name="summary_estimate_cost_egp" string="" widget="float" class="egp-tag"/>
+                                              <div class="o_form_label" style="font-weight:600;">Actual Cost</div>
+                                              <field name="summary_actual_cost_egp" string="" widget="float" class="egp-tag"/>
+                                          </div>
+                                      </div>
+                                     <!-- Revenue Summary Card -->
+                                      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                          <h3 style="color: #666; margin-bottom: 15px; font-size: 16px;">Revenue Summary</h3>
+                                          <div style="display: grid; gap: 10px;">
+                                              <div class="o_form_label" style="font-weight:600;">Estimate Revenue</div>
+                                              <field name="summary_estimate_revenue_egp" string="" widget="float" class="egp-tag"/>
+                                              <div class="o_form_label" style="font-weight:600;">Actual Revenue</div>
+                                              <field name="summary_actual_revenue_egp" string="" widget="float" class="egp-tag"/>
+                                          </div>
+                                      </div>
+                                     <!-- Profit Summary Card -->
+                                      <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #d32f2f;">
+                                          <h3 style="color: #d32f2f; margin-bottom: 15px; font-size: 16px;">Profit Summary</h3>
+                                          <div style="display: grid; gap: 10px;">
+                                              <div class="o_form_label" style="font-weight:600;">Estimate Profit</div>
+                                              <field name="summary_estimate_profit_egp" string="" widget="float" class="egp-tag" decoration-success="summary_estimate_profit_egp &gt; 0" decoration-danger="summary_estimate_profit_egp &lt; 0"/>
+                                              <div class="o_form_label" style="font-weight:600;">Actual Profit</div>
+                                              <field name="summary_actual_profit_egp" string="" widget="float" class="egp-tag" decoration-success="summary_actual_profit_egp &gt; 0" decoration-danger="summary_actual_profit_egp &lt; 0"/>
+                                          </div>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+
+                         <!-- Action Buttons -->
+                         <div style="text-align: center; margin: 20px 0;">
+                             <button name="action_create_vendor_bill" type="object" string="Create Vendor Bill" class="btn btn-primary" style="margin-right: 10px; padding: 10px 20px; font-size: 14px; border-radius: 5px; display: inline-block;" attrs="{'invisible': [('id', '=', False)]}"/>
+                             <button name="action_create_customer_invoice" type="object" string="Create Customer Invoice" class="btn btn-success" style="margin-left: 10px; padding: 10px 20px; font-size: 14px; border-radius: 5px; display: inline-block;" attrs="{'invisible': [('id', '=', False)]}"/>
+                         </div>
+
+                     </div>
+                 </sheet>
+             </form>
+        </field>
+    </record>
+
+    <!-- Tree View with Column Filter -->
+    <record id="view_sgl_file_cover_tree" model="ir.ui.view">
+        <field name="name">sgl.file.cover.tree</field>
+        <field name="model">sgl.file.cover</field>
+        <field name="arch" type="xml">
+            <tree string="File Covers" default_order="name desc" class="sgl-wide-list">
+                <!-- Default Visible Columns - As per image -->
+                <field name="name" string="Job- File No"/>
+                <field name="business_type" string="Business type"/>
+                <field name="initial_file_cover_date" string="Initial file cover Date"/>
+                <field name="origin_office" string="Origin office"/>
+                <field name="eg_customer_name" string="EG Customer Name"/>
+                <field name="bl_awb_mawb_hawb_bks" string="MBL no."/>
+                <field name="hbl_awb_no" string="HBL/AWB no."/>
+                <field name="linar_details" string="Liners details"/>
+                <field name="shipment_description" string="Shipment Description"/>
+                <field name="eta_etd" string="Sailing or Arrival date"/>
+                <field name="shipment_type" string="Shipment type"/>
+                <field name="file_currency" string="Currency"/>
+                <field name="estimate_profit_egp" string="Estimate Profit" sum="Total Estimate Profit"/>
+                <field name="actual_profit_egp" string="Actual Profit" sum="Total Actual Profit"/>
+                <field name="final_file_cover_date" string="final file cover Date"/>
+                <field name="invoice_date" string="Invoice Date"/>
+                <field name="job_status" string="Job Status"/>
+                <field name="invoice_number" string="Invoice #"/>
+                <field name="comments" string="Comment"/>
+                
+                <!-- Additional Columns Available in Filter -->
+                <field name="shipment_description" string="Shipment Description" optional="hide" width="180"/>
+                <field name="estimate_cost_egp" string="Estimate cost" optional="hide" width="140" sum="Total Estimate Cost"/>
+                <field name="actual_cost_egp" string="Actual Cost" optional="hide" width="140" sum="Total Actual Cost"/>
+                <field name="estimate_revenue_egp" string="Estimate Revenue" optional="hide" width="150" sum="Total Estimate Revenue"/>
+                <field name="actual_revenue_egp" string="Actual Revenue" optional="hide" width="150" sum="Total Actual Revenue"/>
+                <field name="customer_tax_details" string="Tax Details" optional="hide" width="180"/>
+                <field name="customer_full_address" string="Full Address" optional="hide" width="180"/>
+                <field name="customer_cr_no" string="CR Number" optional="hide" width="140"/>
+                <field name="customer_tax_no" string="Tax Number" optional="hide" width="140"/>
+                <field name="commodity" string="Commodity" optional="hide" width="140"/>
+                <field name="weight_dimension" string="Weight &amp; Dimension" optional="hide" width="140"/>
+                <field name="container_count_type" string="Container Count &amp; Type" optional="hide" width="160"/>
+                <field name="pol" string="POL" optional="hide" width="100"/>
+                <field name="pod" string="POD" optional="hide" width="100"/>
+                <field name="exchange_rate" string="Exchange Rate" optional="hide" width="120"/>
+                <field name="all_invoice_numbers" string="All Invoice Numbers" optional="hide" width="180"/>
+                
+                <!-- Original Currency Fields - Available in Filter -->
+                <field name="estimate_cost" string="Estimate Cost" optional="hide" width="160" sum="Total Estimate Cost"/>
+                <field name="actual_cost" string="Actual Cost" optional="hide" width="160" sum="Total Actual Cost"/>
+                <field name="estimate_revenue" string="Estimate Revenue" optional="hide" width="180" sum="Total Estimate Revenue"/>
+                <field name="actual_revenue" string="Actual Revenue" optional="hide" width="180" sum="Total Estimate Revenue"/>
+                <field name="estimate_profit" string="Estimate Profit" optional="hide" width="160" sum="Total Estimate Profit"/>
+                <field name="actual_profit" string="Actual Profit" optional="hide" width="160" sum="Total Actual Profit"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_sgl_file_cover_search" model="ir.ui.view">
+        <field name="name">sgl.file.cover.search</field>
+        <field name="model">sgl.file.cover</field>
+        <field name="arch" type="xml">
+            <search string="File Cover Search">
+                <field name="name"/>
+                <field name="eg_customer_name"/>
+                <field name="business_type"/>
+                <field name="origin_office"/>
+                <field name="bl_awb_mawb_hawb_bks"/>
+                <field name="shipment_type"/>
+                                <!-- Removed 'Recent' filter to avoid server eval errors in some environments -->
+                <group expand="0" string="Group By">
+                    <filter string="Business Type" name="business_type" context="{'group_by': 'business_type'}"/>
+                    <filter string="Origin Office" name="origin_office" context="{'group_by': 'origin_office'}"/>
+                    <filter string="Shipment Type" name="shipment_type" context="{'group_by': 'shipment_type'}"/>
+                    <filter string="Creation Date" name="create_date" context="{'group_by': 'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_sgl_file_cover" model="ir.actions.act_window">
+        <field name="name">File Covers</field>
+        <field name="res_model">sgl.file.cover</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first file cover!
+            </p>
+            <p>
+                File covers help you manage and track your logistics operations.
+            </p>
+        </field>
+    </record>
+
+         <!-- Menu -->
+     <menuitem id="menu_sgl_root" name="SGL" sequence="10"/>
+     <menuitem id="menu_sgl_file_cover"
+               name="File Covers"
+               parent="menu_sgl_root"
+               action="action_sgl_file_cover"
+               sequence="10"/>
+
+ </odoo>

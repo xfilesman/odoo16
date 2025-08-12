@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- AIR Sequence -->
+        <record id="seq_sgl_file_cover_air" model="ir.sequence">
+            <field name="name">SGL AIR Sequence</field>
+            <field name="code">sgl.file.cover.air</field>
+            <field name="prefix">SGLAIR</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- SEA Sequence -->
+        <record id="seq_sgl_file_cover_sea" model="ir.sequence">
+            <field name="name">SGL SEA Sequence</field>
+            <field name="code">sgl.file.cover.sea</field>
+            <field name="prefix">SGLSEA</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- ROAD Sequence -->
+        <record id="seq_sgl_file_cover_road" model="ir.sequence">
+            <field name="name">SGL ROAD Sequence</field>
+            <field name="code">sgl.file.cover.road</field>
+            <field name="prefix">SGLROAD</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- CHB Sequence -->
+        <record id="seq_sgl_file_cover_chb" model="ir.sequence">
+            <field name="name">SGL CHB Sequence</field>
+            <field name="code">sgl.file.cover.chb</field>
+            <field name="prefix">SGLCHB</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- WHS Sequence -->
+        <record id="seq_sgl_file_cover_whs" model="ir.sequence">
+            <field name="name">SGL WHS Sequence</field>
+            <field name="code">sgl.file.cover.whs</field>
+            <field name="prefix">SGLWHS</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+    </data>
+</odoo> 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="SGL.ActivityList.Buttons">
+        <div class="o_list_buttons" role="toolbar" aria-label="Main actions">
+            <t t-if="props.createRecord">
+                <button type="button" class="btn btn-primary o_list_button_add" t-on-click="onCreate">New</button>
+            </t>
+            <div class="btn-group" role="group" style="margin:0 8px;">
+                <button type="button" class="btn btn-outline-secondary" t-on-click="() => this.filterByCurrency('egp')">EGP</button>
+                <button type="button" class="btn btn-outline-secondary" t-on-click="() => this.filterByCurrency('usd')">USD</button>
+                <button type="button" class="btn btn-outline-secondary" t-on-click="() => this.filterByCurrency('eur')">EUR</button>
+                <button type="button" class="btn btn-outline-secondary" t-on-click="() => this.filterByCurrency(null)">All</button>
+            </div>
+            <t t-if="props.exportData">
+                <button type="button" class="btn btn-secondary o_list_button_export" t-on-click="onExport">Export</button>
+            </t>
+        </div>
+    </t>
+</templates>
